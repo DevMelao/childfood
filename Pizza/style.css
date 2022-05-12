@@ -1,0 +1,103 @@
+/*Importing a style sheet from another style sheet*/
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+/*All element selector*/
+* {
+  box-sizing: border-box;
+}
+
+/*body tag selector*/
+body {
+  /*Font properties*/
+  font-family: 'Muli', sans-serif;
+  /*Adjusts the element to flex*/
+  display: flex;
+  /*Aligns elements to center*/
+  align-items: center;
+  /*Property aligns the flexible container's items*/
+  justify-content: center;
+  /*Sets Height*/
+  height: 100vh;
+  /*Specifies what happen if content overflows*/
+  overflow: hidden;
+  /*Sets margin size*/
+  margin: 0;
+}
+
+/*class selector*/
+.container {
+  /*Adjusts the element to flex*/
+  display: flex;
+  /*Set the width*/
+  width: 90vw;
+}
+
+/*class selector*/
+.panel {
+  /*Sets background size*/
+  background-size: cover;
+  /*Sets background position*/
+  background-position: center;
+  /*Set background not to repea*/
+  background-repeat: no-repeat;
+  /*Sets height*/
+  height: 80vh;
+  /*Sets Rounded Corners*/
+  border-radius: 50px;
+  /*Sets Color*/
+  color: #fff;
+  /*Specifies mouse cursor on element*/
+  cursor: pointer;
+  /*Sets the flexible length on flexible items*/
+  flex: 0.5;
+  /*Sets the margin*/
+  margin: 10px;
+  /*Sets the position*/
+  position: relative;
+  /*Transistions property values smoothy in a given duration- -webkit-transition is not supported in most modern browsers*/
+  -webkit-transition: all 700ms ease-in;
+}
+
+/*h3 tag selector in panel class*/
+.panel h3 {
+  /*Font Size*/
+  font-size: 24px;
+  /*Sets the position*/
+  position: absolute;
+  /*Set element's botton size*/
+  bottom: 20px;
+  /*Set element's left side size*/
+  left: 20px;
+  /*Sets margin size*/
+  margin: 0;
+  /*Set elements opacity*/
+  opacity: 0;
+}
+
+/*active selector - activates on click*/
+.panel.active {
+  /*Sets the flexible length on flexible items*/
+  flex: 5;
+}
+/*active selector on h3 tag- activates on click*/
+.panel.active h3 {
+  /*Set elements opacity*/
+  opacity: 1;
+  /*Transistions property values smoothy in a given duration*/
+  transition: opacity 0.3s ease-in 0.4s;
+}
+/*Sets default properties for different media devices*/
+@media (max-width: 480px) {
+  /*class selector*/
+  .container {
+    /*Sets the width*/
+    width: 100vw;
+  }
+  /*Selector of certain sub-division element*/
+  .panel:nth-of-type(4),
+  /*Selector of certain sub-division element*/
+  .panel:nth-of-type(5) {
+    /*Element is not displayed*/
+    display: none;
+  }
+}
