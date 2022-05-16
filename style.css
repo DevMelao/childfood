@@ -30,6 +30,16 @@ h1 {
     white-space: nowrap; /*this is to set up a non-second line of the text */
 }
 
+.shake_title {
+  color: rgb(19, 17, 18);
+  text-shadow: 1px  3px rgba(20, 228, 221, 0.8);
+}
+
+.pizza_title {
+  color: rgb(19, 17, 18);
+  text-shadow: 1px 3px rgba(228, 200, 20, 0.8);
+}
+
 .btn {
     position: absolute;
     display: flex;
